@@ -1,15 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Elixir Guide`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Drew Pfundstein`,
+      summary: `who is just a UI Engineer`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `Articles to help you get started learning elixir`,
+    siteUrl: `https://elixirguide.com/`,
   },
   plugins: [
     {
@@ -60,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Elixir Guide`,
+        short_name: `Elixir Guide`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

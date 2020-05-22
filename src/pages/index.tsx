@@ -11,6 +11,7 @@ type Data = {
   site: {
     siteMetadata: {
       title: string
+      siteUrl: string
     }
   }
   allMarkdownRemark: {
@@ -31,13 +32,13 @@ type Data = {
 }
 
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
-  const siteTitle = data.site.siteMetadata.title
+  const { title: siteTitle, siteUrl }  = data.site.siteMetadata
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} siteUrl={siteUrl}>
       <SEO title="All posts" />
-      <Bio />
+      <h2>Recent Posts</h2>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -75,6 +76,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
