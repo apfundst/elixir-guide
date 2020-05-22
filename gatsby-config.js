@@ -3,7 +3,7 @@ module.exports = {
     title: `Elixir Guide`,
     author: {
       name: `Drew Pfundstein`,
-      summary: `who is just a UI Engineer`,
+      summary: `UI Engineer`,
     },
     description: `Articles to help you get started learning elixir`,
     siteUrl: `https://elixirguide.com/`,
